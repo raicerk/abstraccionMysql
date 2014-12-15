@@ -16,17 +16,17 @@ mixed query(string query, array parametros, boolean retorno);
 
 
 
-
 Ejemplos de uso
 
 -------------------------- Ejemplo 1 --------------------------
 include 'sistema/class.controlador.php';
 
 $funciones = new Funciones();
-
 $data = array('i', '1');
 $sql = "SELECT * FROM datos WHERE iddatos = ?";
+
 $resultado = $funciones->query($sql, $data, false);
+
 foreach ($resultado as $campo) {
 	echo $campo['iddatos'];
 	echo $campo['nombredatos'];
@@ -37,6 +37,7 @@ include 'sistema/class.controlador.php';
 
 $funciones = new Funciones();
 $resultado = $funciones->query("SELECT * FROM datos", '', false);
+
 foreach ($resultado as $result) {
     echo $result['iddatos']." : ".$result['nombredatos'] ."<br/>" ;
 }
