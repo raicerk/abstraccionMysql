@@ -1,4 +1,4 @@
-#### Ejecucion de Querys ###
+## Ejecucion de Querys ##
 
 
 mixed query(string query, array parametros, boolean retorno);
@@ -16,9 +16,9 @@ mixed query(string query, array parametros, boolean retorno);
 
 
 
-Ejemplos de uso
+#####Ejemplos de uso:#####
 
--------------------------- Ejemplo 1 --------------------------
+###### Ejemplo 1 ######
 
 include 'sistema/class.controlador.php';
 
@@ -38,7 +38,8 @@ foreach ($resultado as $campo) {
 	
 }
 
------------------------------------- Ejemplo 2 ------------------------------------
+###### Ejemplo 2 ######
+
 include 'sistema/class.controlador.php';
 
 $funciones = new Funciones();
@@ -51,12 +52,17 @@ foreach ($resultado as $result) {
     
 }
 
------------------------------------- Ejemplo 3 ------------------------------------
+###### Ejemplo 3 ######
 
 include 'sistema/class.controlador.php';
 
 $funciones = new Funciones();
+
 $id = 8;
-$name = "Nombre ojojo";
+
+$name = "Juan";
+
 $funciones->query("INSERT INTO datos(iddatos, nombredatos) VALUES (?,?)", array('is', $id, $name), true);
+
 echo $funciones->IdInsertado;
+
