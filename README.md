@@ -69,11 +69,8 @@ $name = "Juan";
 
 $funciones->query("INSERT INTO datos(iddatos, nombredatos) VALUES (?,?)", array('is', $id, $name), true);
 
-
-
-
-
-
+__________________________________________________________________________________________
+__________________________________________________________________________________________
 
 ## Retorno de IdInsertado Query ##
 
