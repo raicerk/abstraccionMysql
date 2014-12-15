@@ -11,13 +11,14 @@ mixed query(string query, array parametros, boolean retorno);
   para su ejecucion, indicando el 
   tipo de datos y los valores de las variables.
 
-* boolean retorno: true indica retorno de datos y false retorna boleano 
+* boolean retorno: 'false' indica retorno de datos y 'true' retorna boleano 
   de ejecucion de query.
 
 
 
-#####Ejemplos de uso:#####
+####Ejemplos de uso:####
 
+__________________________________________________________________________________________
 ###### Ejemplo 1 ######
 
 include 'sistema/class.controlador.php';
@@ -38,6 +39,8 @@ foreach ($resultado as $campo) {
 	
 }
 
+__________________________________________________________________________________________
+
 ###### Ejemplo 2 ######
 
 include 'sistema/class.controlador.php';
@@ -51,6 +54,8 @@ foreach ($resultado as $result) {
     echo $result['iddatos']." : ".$result['nombredatos'] ."<br/>" ;
     
 }
+
+__________________________________________________________________________________________
 
 ###### Ejemplo 3 ######
 
