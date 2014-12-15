@@ -1,4 +1,4 @@
-########################################## Ejecucion de Querys #########################################
+######################### Ejecucion de Querys #########################
 
 
 mixed query(string query, array parametros, boolean retorno);
@@ -7,17 +7,19 @@ mixed query(string query, array parametros, boolean retorno);
 
 * string query: corresponde a la consulta a realizar.
 
-* array parametros: corresponde a los parametros que utilizara la query para su ejecucion, indicando el 
+* array parametros: corresponde a los parametros que utilizara la query 
+  para su ejecucion, indicando el 
   tipo de datos y los valores de las variables.
 
-* boolean retorno: true indica retorno de datos y false retorna boleano de ejecucion de query.
+* boolean retorno: true indica retorno de datos y false retorna boleano 
+  de ejecucion de query.
 
 
 
 
 Ejemplos de uso
 
------------------------------------- Ejemplo 1 ------------------------------------
+-------------------------- Ejemplo 1 --------------------------
 include 'sistema/class.controlador.php';
 
 $funciones = new Funciones();
@@ -47,6 +49,3 @@ $id = 8;
 $name = "Nombre ojojo";
 $funciones->query("INSERT INTO datos(iddatos, nombredatos) VALUES (?,?)", array('is', $id, $name), true);
 echo $funciones->IdInsertado;
-
-
-########################################################################################################
