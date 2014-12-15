@@ -11,6 +11,7 @@ class Database{
     private $user;
     private $pass;
     private $ddbb;
+    public $Insert_Id;
 
 
     public function __get($property){
@@ -40,6 +41,7 @@ class Database{
         }
 
         $stmt->execute();
+        
            
         if($this->cierre){
             $result = $mysqli->affected_rows;
@@ -62,10 +64,12 @@ class Database{
 
             $result = $results;
         }
-
+        
+        $this->Insert_Id = $stmt->insert_id;
+        
         $stmt->close();
         $mysqli->close();
-          
+
         return  $result;
     }
 
@@ -79,7 +83,7 @@ class Database{
         }else{
             return $arr;
         }    
-    }     
+    }
 }
 
 ?>

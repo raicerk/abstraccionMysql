@@ -47,7 +47,7 @@ $funciones = new Funciones();
 $id = 8;
 $name = "Nombre ojojo";
 $funciones->query("INSERT INTO datos(iddatos, nombredatos) VALUES (?,?)", array('is', $id, $name), true);
-
+echo $funciones->IdInsertado;
 
 
 ########################################################################################################
