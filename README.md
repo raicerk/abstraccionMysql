@@ -69,5 +69,35 @@ $name = "Juan";
 
 $funciones->query("INSERT INTO datos(iddatos, nombredatos) VALUES (?,?)", array('is', $id, $name), true);
 
-echo $funciones->IdInsertado;
 
+
+
+
+
+
+## Retorno de IdInsertado Query ##
+
+
+int IdInsertado;
+
+
+* Int IdInsertado: Posee el valor de Id Insertado en una ejecucion de query tipo 'INSERT'.
+
+
+
+####Ejemplos de uso:####
+
+__________________________________________________________________________________________
+###### Ejemplo 1 ######
+
+include 'sistema/class.controlador.php';
+
+$funciones = new Funciones();
+
+$id = 8;
+
+$name = "Juan";
+
+$funciones->query("INSERT INTO datos(iddatos, nombredatos) VALUES (?,?)", array('is', $id, $name), true);
+
+echo $funciones->IdInsertado;
