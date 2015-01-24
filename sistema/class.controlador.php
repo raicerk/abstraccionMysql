@@ -7,6 +7,7 @@ class Funciones{
 
 	private $IdInsertado;
 	private $datos;
+	private $Cantidad;
 
 	public function __get($property){
         if (property_exists($this, $property)){
@@ -27,6 +28,7 @@ class Funciones{
 		$database->cierre = $cierre;
 		$this->datos = $database->query($cierre);
 		$this->IdInsertado = $database->Insert_Id;
+		$this->Cantidad = $database->Cantidad;
 		return $this->datos;
 	}
 

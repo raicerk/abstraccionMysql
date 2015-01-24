@@ -12,6 +12,7 @@ class Database{
     private $pass;
     private $ddbb;
     public $Insert_Id;
+    public $Cantidad;
 
 
     public function __get($property){
@@ -66,7 +67,8 @@ class Database{
         }
         
         $this->Insert_Id = $stmt->insert_id;
-        
+        $this->Cantidad = $stmt->num_rows;
+
         $stmt->close();
         $mysqli->close();
 
