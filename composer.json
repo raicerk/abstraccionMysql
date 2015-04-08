@@ -1,7 +1,7 @@
 {
-    "name": "AbstraccionMysql/AbstraccionMysql",
+    "name": "abstraccion-mysql/abstraccion-mysql",
     "type": "library",
-    "description": "Capa de abstraccion para ejecucion de querys usando el conector mysqli",
+    "description": "Capa de abstracción para ejecución de querys usando el conector mysqli",
     "keywords": ["mysqli","mysql","ddbb","Base de datos mysql","Conexion mysql","Capa"],
     "homepage": "http://github.com/raicerk/AbstraccionMysql",
     "license": "MIT",
