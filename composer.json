@@ -1,0 +1,24 @@
+{
+    "name": "AbstraccionMysql/AbstraccionMysql",
+    "type": "library",
+    "description": "Capa de abstraccion para ejecucion de querys usando el conector mysqli",
+    "keywords": ["mysqli","mysql","ddbb","Base de datos mysql","Conexion mysql","Capa"],
+    "homepage": "http://github.com/raicerk/AbstraccionMysql",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Juan Mora",
+            "email": "jvmora@raicerk.cl",
+            "homepage": "http://raicerk.cl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.0.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "AbstraccionMysql": "core"
+        }
+    }
+}
