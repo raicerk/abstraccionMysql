@@ -16,10 +16,26 @@ Definición de la función
 mixed query(string query, array parámetros, boolean retorno);
 
 * String query: corresponde a la consulta a realizar.
+    puede ser tanto una query de una sola linea:
+    
+    SELECT * FROM DATOS;
+    
+    o un llamado a un procedimiento almacenado
+    
+    CALL procedureName (?,?,?);
 
-* Array parámetros: corresponde a los parámetros que utilizara la query 
-  para su ejecución, indicando el 
-  tipo de datos y los valores de las variables.
+* Array parámetros: corresponde a los parámetros que utilizara la query para su ejecución, indicando el tipo de datos y los valores de las variables.
+
+    En el se indica el tipo de datos que pueden ser tres:
+
+    | Caracter | Descripción          |
+    | -------- | -------------------- |
+    |     i    | variable tipo entero |
+    |     d    | variable tipo double |
+    |     s    | variable tipo string |
+    |     b    | variable tipo blob   |
+
+        
 
 * Boolean retorno: 'false' indica retorno de datos y 'true' retorna boleano 
   de ejecución de query.
