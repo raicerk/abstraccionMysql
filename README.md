@@ -40,12 +40,25 @@ mixed query(string query, array parámetros, boolean retorno);
 * Boolean retorno: 'false' indica retorno de datos y 'true' retorna boleano 
   de ejecución de query.
 
+## Retorno de IdInsertado Query ##
+
+int IdInsertado;
+
+* Int IdInsertado: Posee el valor de Id Insertado en una ejecución de query tipo 'INSERT'.
+
+
+## Cuenta de registros ##
+
+int CantidadRegistros;
+
+* Int CantidadRegistros: Posee el numero de registros devueltos en una ejecución de query tipo 'SELECT' sin necesidad de ejecutar o retornar los valores y trabajar con ellos.
+
 
 
 ####Ejemplos de uso:####
 
 __________________________________________________________________________________________
-###### Ejemplo 1 ######
+###### Ejemplo Querys 1 ######
 
     include 'sistema/class.controlador.php';
     $funciones = new Funciones();
@@ -59,7 +72,7 @@ ________________________________________________________________________________
 
 __________________________________________________________________________________________
 
-###### Ejemplo 2 ######
+###### Ejemplo Querys 2 ######
 
     include 'sistema/class.controlador.php';
     $funciones = new Funciones();
@@ -70,7 +83,7 @@ ________________________________________________________________________________
 
 __________________________________________________________________________________________
 
-###### Ejemplo 3 ######
+###### Ejemplo Querys 3 ######
 
     include 'sistema/class.controlador.php';
     $funciones = new Funciones();
@@ -78,23 +91,9 @@ ________________________________________________________________________________
     $name = "Juan";
     $funciones->query("INSERT INTO datos(iddatos, nombredatos) VALUES (?,?)", array('is', $id, $name), true);
 
-__________________________________________________________________________________________
-__________________________________________________________________________________________
-
-## Retorno de IdInsertado Query ##
-
-
-int IdInsertado;
-
-
-* Int IdInsertado: Posee el valor de Id Insertado en una ejecución de query tipo 'INSERT'.
-
-
-
-####Ejemplos de uso:####
 
 __________________________________________________________________________________________
-###### Ejemplo ######
+###### Ejemplo IdInsertado ######
 
     include 'sistema/class.controlador.php';
     $funciones = new Funciones();
@@ -102,3 +101,11 @@ ________________________________________________________________________________
     $name = "Juan";
     $funciones->query("INSERT INTO datos(iddatos, nombredatos) VALUES (?,?)", array('is', $id, $name), true);
     echo $funciones->IdInsertado;
+    
+__________________________________________________________________________________________
+###### Ejemplo CantidadRegistros ######
+
+    include 'sistema/class.controlador.php';
+    $funciones = new Funciones();
+    $resultado = $funciones->query("SELECT * FROM datos", '', false);
+    echo $funciones->CantidadRegistros;
