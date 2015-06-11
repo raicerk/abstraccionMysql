@@ -1,3 +1,6 @@
+Librería para la conexión y ejecución de querys y procedimientos almacenados en bases de datos mysql usando la librería nativa de mysqli, aplicando el sistema de seguridad de preparación y análisis de querys antes de su ejecución.
+
+
 ## Configuración ##
 
 En el archivo class.constantes.php deben ingresar los valores correspondientes a la base de datos que desea conectarse
